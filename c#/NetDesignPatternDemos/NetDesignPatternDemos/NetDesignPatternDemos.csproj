@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="H:\BlogGardern\Github\DesignPattern\DesignPatternDemos\c#\NetDesignPatternDemos\NetDesignPatternDemos\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="H:\BlogGardern\Github\DesignPattern\DesignPatternDemos\c#\NetDesignPatternDemos\NetDesignPatternDemos\.editorconfig" />
+  </ItemGroup>
+
+</Project>
