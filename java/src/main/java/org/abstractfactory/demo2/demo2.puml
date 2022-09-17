@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface AbstractFactory
+{
+    +Connection
+    +Statement
+}
+class MysqlFactory implements AbstractFactory
+{
+    +Connection
+    +Statement
+}
+class OracleFactory implements AbstractFactory
+{
+    +Connection
+    +Statement
+}
+
+interface Connection
+interface Statement
+AbstractFactory*--Connection
+AbstractFactory*--Statement
+
+class MysqlConnection implements Connection
+class MysqlStatement implements Statement
+
+class OracleConnection implements Connection
+class OracleStatement implements Statement
+
+@enduml
