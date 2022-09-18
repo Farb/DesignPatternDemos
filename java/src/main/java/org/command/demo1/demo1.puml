@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+Switch o--> Command
+class Switch
+{
+    +setCommand()
+    +open()
+    +close()
+}
+
+interface Command
+{
+    +execute()
+}
+
+class OpenLightCommand implements Command
+{
+   - Light
+}
+OpenLightCommand--> Light
+class CloseLightCommand implements Command
+{
+    -Light
+}
+CloseLightCommand --> Light
+class Light
+{
+    +open()
+    +close()
+}
+
+class Fan
+{
+    +open()
+    +close()
+}
+OpenFanCommand --> Fan
+CloseFanCommand --> Fan
+class OpenFanCommand implements Command
+{
+    -Fan
+}
+class CloseFanCommand implements Command
+{
+    -Fan
+}
+
+@enduml

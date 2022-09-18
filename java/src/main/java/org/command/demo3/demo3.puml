@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class BoardScreen
+{
+    +open()
+    +create()
+    +edit()
+}
+
+class Menu
+{
+    +List<MenuItem> menuItems
+    +addMenuItem(MenuItem item)
+}
+
+MenuItem --> Command
+class MenuItem
+{
+    -Command command
+    +setCommand()
+    +click()
+}
+
+abstract class Command
+{
+    +execute()
+}
+
+OpenCommand --> BoardScreen
+class OpenCommand extends Command
+{
+    +execute()
+}
+CreateCommand --> BoardScreen
+class CreateCommand extends Command
+{
+    +execute()
+}
+EditCommand --> BoardScreen
+class EditCommand extends Command
+{
+    +execute()
+}
+@enduml
