@@ -1,0 +1,20 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Component
+{
+    +issue()
+    +add()
+    +remove()
+    +get(int i)
+}
+
+class Leaf implements Component
+{
+}
+class Composite implements Component
+{
+    -ArrayList<Component> leafList
+    +issue()
+}
+@enduml
